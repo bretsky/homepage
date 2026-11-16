@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brett Selby</title>
+  <meta name="description" content="Brett Selby: former software engineer, now steering agentic AI. Projects in stats, modeling and (e)sports analytics, including pickems and clr.">
+  <meta name="theme-color" content="#002b36">
+  <link rel="canonical" href="https://brettselby.xyz/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://brettselby.xyz/">
+  <meta property="og:site_name" content="brettselby.xyz">
+  <meta property="og:title" content="Brett Selby">
+  <meta property="og:description" content="Former software engineer, now steering agentic AI. Stats, modeling and (e)sports analytics.">
+  <meta property="profile:first_name" content="Brett">
+  <meta property="profile:last_name" content="Selby">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Brett Selby">
+  <meta name="twitter:description" content="Former software engineer, now steering agentic AI. Stats, modeling and (e)sports analytics.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brett Selby",
+    "url": "https://brettselby.xyz/",
+    "email": "mailto:bmselby@uwaterloo.ca",
+    "description": "Former software engineer, now steering agentic AI. Stats, modeling and (e)sports analytics.",
+    "knowsAbout": ["Statistics", "Predictive modeling", "Sports analytics", "Esports analytics", "Agentic AI"],
+    "sameAs": ["https://github.com/bretsky"]
+  }
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Solarized dark */
+      --bg: #002b36;        /* base03 */
+      --faint: #073642;     /* base02: hairlines */
+      --muted: #586e75;     /* base01: secondary labels */
+      --text: #839496;      /* base0: body copy */
+      --fg: #93a1a1;        /* base1: emphasis */
+      --accent: #b58900;    /* yellow */
+      --accent-2: #2aa198;  /* cyan */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 15px/1.65 "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      min-height: 100vh;
+      display: flex;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    main {
+      width: 100%;
+      max-width: 620px;
+      margin: auto;
+      padding: 72px 24px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
+
+    /* header */
+    h1 {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    h1 .cursor {
+      display: inline-block;
+      width: 0.6em;
+      height: 1.1em;
+      margin-left: 2px;
+      vertical-align: -0.2em;
+      background: var(--accent);
+      animation: blink 1.1s steps(1) infinite;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .bio {
+      margin-top: 12px;
+      color: var(--text);
+      max-width: 46ch;
+    }
+
+    /* sections */
+    section { margin-top: 64px; }
+
+    .label {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--accent-2);
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+    }
+    .label::before { content: "~/"; color: var(--muted); }
+
+    /* projects */
+    .projects { list-style: none; border-top: 1px solid var(--faint); }
+
+    .projects a {
+      display: grid;
+      grid-template-columns: 2.5ch 1fr auto;
+      column-gap: 2ch;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--faint);
+    }
+
+    .idx { color: var(--muted); font-size: 12px; }
+
+    .name { font-weight: 500; transition: color .2s; }
+
+    .host {
+      font-size: 12px;
+      color: var(--muted);
+      transition: color .2s;
+    }
+
+    .arrow {
+      color: var(--muted);
+      transition: transform .2s, color .2s;
+    }
+
+    .blurb {
+      grid-column: 2 / -1;
+      color: var(--text);
+      font-size: 13px;
+      margin-top: 4px;
+      max-width: 60ch;
+    }
+
+    .tags {
+      grid-column: 2 / -1;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .projects a:hover .name,
+    .projects a:focus-visible .name { color: var(--accent); }
+    .projects a:hover .arrow,
+    .projects a:focus-visible .arrow { color: var(--accent); transform: translate(3px, -3px); }
+    .projects a:hover .host { color: var(--fg); }
+
+    /* links */
+    .links { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; }
+    .links a {
+      color: var(--fg);
+      border-bottom: 1px solid var(--faint);
+      transition: border-color .2s, color .2s;
+    }
+    .links a:hover, .links a:focus-visible { color: var(--accent); border-color: var(--accent); }
+
+    footer {
+      margin-top: 72px;
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 14px; }
+      main { padding: 48px 16px; }
+      section { margin-top: 48px; }
+      .projects a { column-gap: 1.5ch; }
+      .host { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      h1 .cursor { animation: none; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>brett selby<span class="cursor" aria-hidden="true"></span></h1>
+      <p class="bio">Former software engineer, now steering agentic AI. Big fan of stats, modeling and (e)sports analytics.</p>
+    </header>
+
+    <section aria-labelledby="projects-label">
+      <h2 class="label" id="projects-label">projects</h2>
+      <ul class="projects">
+        <li>
+          <a href="https://pickems.brettselby.xyz">
+            <span class="idx">01</span>
+            <span class="name">pickems <span class="host">pickems.brettselby.xyz</span></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+            <span class="blurb">Monte Carlo forecast of the League of Legends World Championship. Simulates every draft and box score to pick the best Pick'Em bracket and Crystal Ball answers.</span>
+            <span class="tags">monte carlo · draft modeling · lol worlds</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://clr.brettselby.xyz">
+            <span class="idx">02</span>
+            <span class="name">clr <span class="host">clr.brettselby.xyz</span></span>
+            <span class="arrow" aria-hidden="true">↗</span>
+            <span class="blurb">Career Legend Rating: all-time rankings of pro League of Legends players, built on a WAR-style measure of each player's impact on win probability.</span>
+            <span class="tags">win probability · regional elo · player ratings</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="links-label">
+      <h2 class="label" id="links-label">elsewhere</h2>
+      <ul class="links">
+        <li><a href="https://github.com/bretsky">github</a></li>
+        <li><a href="mailto:bmselby@uwaterloo.ca">email</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <span>brettselby.xyz</span>
+      <span>© <span id="year">2026</span></span>
+    </footer>
+  </main>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

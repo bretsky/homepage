@@ -1,0 +1,8 @@
+{
+  "name": "homepage",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes wrangler@4 pages dev",
+    "deploy": "npx --yes wrangler@4 pages deploy --branch main"
+  }
+}
